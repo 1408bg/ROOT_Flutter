@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(393, 852),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Pretendard',
           bottomSheetTheme: BottomSheetThemeData(
