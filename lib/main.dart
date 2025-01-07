@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_colors.dart';
+import 'package:root/presentation/login/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: RootColors.gray600,
           ),
         ),
-        home: loginScreen(),
+        home: const LoginScreen(),
       ),
     );
   }
