@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_images.dart';
 import 'package:root/components/root_layout.dart';
+import 'package:root/components/root_tab.dart';
 
 import '../../components/root_colors.dart';
 
@@ -34,7 +35,9 @@ class _LoginScreenState extends State<LoginScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.r),
               )),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (_) => RootTab()));
+          },
           child: Text(
             '로그인',
             style: TextStyle(
