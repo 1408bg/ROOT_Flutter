@@ -15,11 +15,12 @@ class RootImages {
   static const String person2 = 'assets/icons/person2.png';
   static const String qrIcon = 'assets/icons/qr_icon.png';
   static const String qrIcon2 = 'assets/icons/qr_icon2.png';
-  static const String root = 'assets/icons/root.png';
   static const String location = 'assets/icons/tdesign_location.png';
   static const String timeLine = 'assets/icons/time-line.png';
   static const String checkCircle = 'assets/icons/check-circle.png';
+  static const String backIcon = 'assets/icons/back.png';
 
   //logo
-  static const String rootLogo = 'assets/logo/root-logo.png';
+  static const String rootLogo = 'assets/logos/root-logo.png';
+  static const String root = 'assets/logos/root.png';
 }
