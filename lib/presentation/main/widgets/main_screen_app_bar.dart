@@ -10,7 +10,7 @@ class MainScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
     return PreferredSize(
       preferredSize: preferredSize,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 22.0.w),
+        padding: EdgeInsets.symmetric(horizontal: 10.0.w),
         child: AppBar(
           automaticallyImplyLeading: false,
           title: Row(
