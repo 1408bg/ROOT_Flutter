@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Pretendard',
+          appBarTheme: AppBarTheme(
+            backgroundColor: RootColors.gray600,
+          ),
           bottomSheetTheme: BottomSheetThemeData(
             backgroundColor: RootColors.gray600,
           ),
