@@ -1,6 +1,7 @@
 class RootImages {
   RootImages._();
 
+  //icons
   static const String calender = 'assets/icons/calender.png';
   static const String eyeOff = 'assets/icons/eye-off.png';
   static const String eyeOn = 'assets/icons/eye-on.png';
@@ -17,5 +18,8 @@ class RootImages {
   static const String root = 'assets/icons/root.png';
   static const String location = 'assets/icons/tdesign_location.png';
   static const String timeLine = 'assets/icons/time-line.png';
+  static const String checkCircle = 'assets/icons/check-circle.png';
 
+  //logo
+  static const String rootLogo = 'assets/logo/root-logo.png';
 }
