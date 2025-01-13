@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:root/components/root_colors.dart';
 import 'package:root/components/root_images.dart';
 import 'package:root/components/root_layout.dart';
 import 'package:root/presentation/main/main_screen.dart';
@@ -38,72 +39,77 @@ class _RootTabState extends State<RootTab> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return RootLayout(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        currentIndex: currentIndex,
-        onTap: (value) {
-          setState(() {
-            controller.animateTo(value);
-          });
-        },
-        items: [
-          BottomNavigationBarItem(
-            icon: currentIndex == 0
-                ? Image.asset(
-                    RootImages.qrIcon2,
-                    width: 25.w,
-                    height: 25.h,
-                  )
-                : Image.asset(
-                    RootImages.qrIcon,
-                    width: 25.w,
-                    height: 25.h,
-                  ),
-            label: " ",
-          ),
-          BottomNavigationBarItem(
-            icon: currentIndex == 1
-                ? Image.asset(
-                    RootImages.home2,
-                    width: 25.w,
-                    height: 25.h,
-                  )
-                : Image.asset(
-                    RootImages.home,
-                    width: 25.w,
-                    height: 25.h,
-                  ),
-            label: " ",
-          ),
-          BottomNavigationBarItem(
-            icon: currentIndex == 2
-                ? Image.asset(
-              RootImages.paper2,
-              width: 25.w,
-              height: 25.h,
-            )
-                : Image.asset(
-              RootImages.paper,
-              width: 25.w,
-              height: 25.h,
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          border: Border(top: BorderSide(color: RootColors.gray400, width: 1))
+        ),
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: currentIndex,
+          onTap: (value) {
+            setState(() {
+              controller.animateTo(value);
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+              icon: currentIndex == 0
+                  ? Image.asset(
+                      RootImages.qrIcon2,
+                      width: 25.w,
+                      height: 25.h,
+                    )
+                  : Image.asset(
+                      RootImages.qrIcon,
+                      width: 25.w,
+                      height: 25.h,
+                    ),
+              label: " ",
             ),
-            label: " ",
-          ),
-          BottomNavigationBarItem(
-            icon: currentIndex == 3
-                ? Image.asset(
-              RootImages.person2,
-              width: 25.w,
-              height: 25.h,
-            )
-                : Image.asset(
-              RootImages.person,
-              width: 25.w,
-              height: 25.h,
+            BottomNavigationBarItem(
+              icon: currentIndex == 1
+                  ? Image.asset(
+                      RootImages.home2,
+                      width: 25.w,
+                      height: 25.h,
+                    )
+                  : Image.asset(
+                      RootImages.home,
+                      width: 25.w,
+                      height: 25.h,
+                    ),
+              label: " ",
             ),
-            label: " ",
-          ),
-        ],
+            BottomNavigationBarItem(
+              icon: currentIndex == 2
+                  ? Image.asset(
+                RootImages.paper2,
+                width: 25.w,
+                height: 25.h,
+              )
+                  : Image.asset(
+                RootImages.paper,
+                width: 25.w,
+                height: 25.h,
+              ),
+              label: " ",
+            ),
+            BottomNavigationBarItem(
+              icon: currentIndex == 3
+                  ? Image.asset(
+                RootImages.person2,
+                width: 25.w,
+                height: 25.h,
+              )
+                  : Image.asset(
+                RootImages.person,
+                width: 25.w,
+                height: 25.h,
+              ),
+              label: " ",
+            ),
+          ],
+        ),
       ),
       child: TabBarView(
         controller: controller,
