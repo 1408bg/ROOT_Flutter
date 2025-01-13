@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_layout.dart';
+import 'package:root/presentation/main/detail_main_screen.dart';
 import 'package:root/presentation/main/widgets/main_screen_app_bar.dart';
 
 import '../../components/root_colors.dart';
@@ -54,6 +55,11 @@ class _MainScreenState extends State<MainScreen> {
                         height: 10.h,
                       ),
                       GestureDetector(
+                        onTap: (){
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => const DetailMainScreen())
+                          );
+                        },
                         child: Container(
                           width: 353.w,
                           height: 72.h,
@@ -78,7 +84,7 @@ class _MainScreenState extends State<MainScreen> {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   );
                 },
