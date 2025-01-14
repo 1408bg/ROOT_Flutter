@@ -3,8 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_images.dart';
 import 'package:root/presentation/notification/notification_screen.dart';
 
+import '../root_colors.dart';
+
 class RootAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const RootAppBar({super.key});
+  final String title;
+
+  const RootAppBar({
+    required this.title,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,35 +21,36 @@ class RootAppBar extends StatelessWidget implements PreferredSizeWidget {
         padding: EdgeInsets.symmetric(horizontal: 10.0.w),
         child: AppBar(
           automaticallyImplyLeading: false,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Image.asset(
-                RootImages.rootLogo,
-                width: 72.w,
-                height: 31.h,
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => const NotificationScreen(),
-                    ),
-                  );
-                },
-                icon: Image.asset(
-                  RootImages.bell,
-                  width: 25.w,
-                  height: 25.h,
-                ),
-              ),
-            ],
+          title: Text(
+            title,
+            style: TextStyle(
+              color: RootColors.gray100,
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w600,
+            ),
           ),
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const NotificationScreen(),
+                  ),
+                );
+              },
+              icon: Image.asset(
+                RootImages.bell,
+                width: 25.w,
+                height: 25.h,
+              ),
+            ),
+          ],
+          centerTitle: true,
         ),
       ),
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(45.h);
+  Size get preferredSize => Size.fromHeight(50.h);
 }
