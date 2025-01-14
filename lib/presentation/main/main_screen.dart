@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/widgets/root_layout.dart';
 import 'package:root/presentation/main/detail_main_screen.dart';
-import 'package:root/components/widgets/root_app_bar.dart';
+import 'package:root/components/widgets/root_main_app_bar.dart';
 
 import '../../components/root_colors.dart';
 
@@ -24,7 +24,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return RootLayout(
-      appBar: const RootAppBar(),
+      appBar: const RootMainAppBar(),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 22.0.w),
         child: Column(
