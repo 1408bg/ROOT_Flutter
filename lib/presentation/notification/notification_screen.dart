@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_colors.dart';
-import 'package:root/components/root_layout.dart';
-import 'package:root/presentation/notification/widgets/notification_app_bar.dart';
+import 'package:root/components/widgets/root_layout.dart';
+import 'package:root/components/widgets/root_detail_app_bar.dart';
 
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({super.key});
@@ -26,7 +26,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return RootLayout(
-      appBar: const NotificationAppBar(title: '알림'),
+      appBar: const RootDetailAppBar(title: '알림'),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 37.w),
         child: Column(

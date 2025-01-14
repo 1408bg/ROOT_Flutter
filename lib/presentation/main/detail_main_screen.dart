@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_images.dart';
-import 'package:root/components/root_layout.dart';
-import 'package:root/presentation/main/widgets/detail_app_bar.dart';
+import 'package:root/components/widgets/root_layout.dart';
+import 'package:root/components/widgets/root_detail_app_bar.dart';
 
 import '../../components/root_colors.dart';
 
@@ -41,7 +41,7 @@ class _DetailMainScreenState extends State<DetailMainScreen> {
   @override
   Widget build(BuildContext context) {
     return RootLayout(
-      appBar: const DetailAppBar(title: "봉사활동"),
+      appBar: const RootDetailAppBar(title: "봉사활동"),
       bottomSheet: Padding(
         padding: EdgeInsets.only(bottom: 20.0.h),
         child: ElevatedButton(
