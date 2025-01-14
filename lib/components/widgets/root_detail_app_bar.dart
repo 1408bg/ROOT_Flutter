@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_images.dart';
 
-import '../../../components/root_colors.dart';
+import '../root_colors.dart';
 
-class DetailAppBar extends StatelessWidget implements PreferredSizeWidget {
+class RootDetailAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
 
-  const DetailAppBar({
+  const RootDetailAppBar({
     required this.title,
     super.key,
   });

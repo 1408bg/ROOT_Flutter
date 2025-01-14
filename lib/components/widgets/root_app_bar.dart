@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_images.dart';
 import 'package:root/presentation/notification/notification_screen.dart';
 
-class MainScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MainScreenAppBar({super.key});
+class RootAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const RootAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
