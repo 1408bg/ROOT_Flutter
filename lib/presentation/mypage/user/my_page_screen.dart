@@ -4,9 +4,9 @@ import 'package:root/components/root_colors.dart';
 import 'package:root/components/widgets/root_app_bar.dart';
 import 'package:root/components/widgets/root_layout.dart';
 import 'package:root/presentation/login/login_screen.dart';
-import 'package:root/presentation/mypage/detail_my_page_screen.dart';
+import 'package:root/presentation/mypage/user/detail_my_page_screen.dart';
 
-import '../../components/root_images.dart';
+import '../../../components/root_images.dart';
 
 class MyPageScreen extends StatefulWidget {
   const MyPageScreen({super.key});

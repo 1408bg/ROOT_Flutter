@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/widgets/root_detail_app_bar.dart';
 import 'package:root/components/widgets/root_layout.dart';
 
-import '../../components/root_colors.dart';
+import '../../../components/root_colors.dart';
 
 class DetailMyPageScreen extends StatefulWidget {
   const DetailMyPageScreen({super.key});
