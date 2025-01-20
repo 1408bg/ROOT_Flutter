@@ -5,6 +5,7 @@ import 'package:root/components/root_images.dart';
 import 'package:root/components/widgets/root_layout.dart';
 import 'package:root/presentation/calendar/calendar_screen.dart';
 import 'package:root/presentation/main/main_screen.dart';
+import 'package:root/presentation/mypage/my_page_screen.dart';
 
 class RootTab extends StatefulWidget {
   const RootTab({super.key});
@@ -121,9 +122,7 @@ class _RootTabState extends State<RootTab> with TickerProviderStateMixin {
           ),
           MainScreen(),
           CalendarScreen(),
-          Center(
-            child: Text("page4"),
-          ),
+          MyPageScreen(),
         ],
       ),
     );
