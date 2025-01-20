@@ -4,25 +4,27 @@ import 'package:root/components/root_colors.dart';
 import 'package:root/components/root_images.dart';
 import 'package:root/components/widgets/root_layout.dart';
 import 'package:root/presentation/calendar/calendar_screen.dart';
+import 'package:root/presentation/main/admin/admin_main_screen.dart';
 import 'package:root/presentation/main/user/main_screen.dart';
+import 'package:root/presentation/mypage/admin/admin_my_page.dart';
 import 'package:root/presentation/mypage/user/my_page_screen.dart';
 
-class RootTab extends StatefulWidget {
-  const RootTab({super.key});
+class RootAdminTab extends StatefulWidget {
+  const RootAdminTab({super.key});
 
   @override
-  State<RootTab> createState() => _RootTabState();
+  State<RootAdminTab> createState() => _RootAdminTabState();
 }
 
-class _RootTabState extends State<RootTab> with TickerProviderStateMixin {
-  late TabController controller = TabController(length: 4, vsync: this);
+class _RootAdminTabState extends State<RootAdminTab> with TickerProviderStateMixin {
+  late TabController controller = TabController(length: 3, vsync: this);
 
   int currentIndex = 0;
 
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: 4, vsync: this);
+    controller = TabController(length: 3, vsync: this);
     controller.addListener(tabListener);
   }
 
@@ -43,7 +45,7 @@ class _RootTabState extends State<RootTab> with TickerProviderStateMixin {
     return RootLayout(
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          border: Border(top: BorderSide(color: RootColors.gray400, width: 1))
+            border: Border(top: BorderSide(color: RootColors.gray400, width: 1))
         ),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
@@ -57,33 +59,19 @@ class _RootTabState extends State<RootTab> with TickerProviderStateMixin {
             BottomNavigationBarItem(
               icon: currentIndex == 0
                   ? Image.asset(
-                      RootImages.qrIcon2,
-                      width: 25.w,
-                      height: 25.h,
-                    )
+                RootImages.home2,
+                width: 25.w,
+                height: 25.h,
+              )
                   : Image.asset(
-                      RootImages.qrIcon,
-                      width: 25.w,
-                      height: 25.h,
-                    ),
+                RootImages.home,
+                width: 25.w,
+                height: 25.h,
+              ),
               label: " ",
             ),
             BottomNavigationBarItem(
               icon: currentIndex == 1
-                  ? Image.asset(
-                      RootImages.home2,
-                      width: 25.w,
-                      height: 25.h,
-                    )
-                  : Image.asset(
-                      RootImages.home,
-                      width: 25.w,
-                      height: 25.h,
-                    ),
-              label: " ",
-            ),
-            BottomNavigationBarItem(
-              icon: currentIndex == 2
                   ? Image.asset(
                 RootImages.paper2,
                 width: 25.w,
@@ -97,7 +85,7 @@ class _RootTabState extends State<RootTab> with TickerProviderStateMixin {
               label: " ",
             ),
             BottomNavigationBarItem(
-              icon: currentIndex == 3
+              icon: currentIndex == 2
                   ? Image.asset(
                 RootImages.person2,
                 width: 25.w,
@@ -117,12 +105,9 @@ class _RootTabState extends State<RootTab> with TickerProviderStateMixin {
         controller: controller,
         physics: const NeverScrollableScrollPhysics(),
         children: const [
-          Center(
-            child: Text("page1"),
-          ),
-          MainScreen(),
+          AdminMainScreen(),
           CalendarScreen(),
-          MyPageScreen(),
+          AdminMyPage(),
         ],
       ),
     );
