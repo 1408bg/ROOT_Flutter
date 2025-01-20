@@ -19,6 +19,8 @@ class RootImages {
   static const String timeLine = 'assets/icons/time-line.png';
   static const String checkCircle = 'assets/icons/check-circle.png';
   static const String backIcon = 'assets/icons/back.png';
+  static const String leftChevron = 'assets/icons/left-chervon.png';
+  static const String rightChevron = 'assets/icons/right-chervon.png';
 
   //logo
   static const String rootLogo = 'assets/logos/root-logo.png';

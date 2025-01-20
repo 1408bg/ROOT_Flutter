@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_colors.dart';
 import 'package:root/components/root_images.dart';
-import 'package:root/components/root_layout.dart';
+import 'package:root/components/widgets/root_layout.dart';
+import 'package:root/presentation/calendar/calendar_screen.dart';
 import 'package:root/presentation/main/main_screen.dart';
 
 class RootTab extends StatefulWidget {
@@ -119,9 +120,7 @@ class _RootTabState extends State<RootTab> with TickerProviderStateMixin {
             child: Text("page1"),
           ),
           MainScreen(),
-          Center(
-            child: Text("page3"),
-          ),
+          CalendarScreen(),
           Center(
             child: Text("page4"),
           ),

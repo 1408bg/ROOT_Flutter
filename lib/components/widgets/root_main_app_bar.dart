@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_images.dart';
+import 'package:root/presentation/notification/notification_screen.dart';
 
-class MainScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MainScreenAppBar({super.key});
+class RootMainAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const RootMainAppBar({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +17,18 @@ class MainScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset(
-                RootImages.rootLogo,
-                width: 72.w,
-                height: 31.h,
-              ),
+                Image.asset(
+                  RootImages.rootLogo,
+                  width: 72.w,
+                  height: 31.h,
+                ),
               IconButton(
                 onPressed: () {
-                  debugPrint("우와 아이콘이다");
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const NotificationScreen(),
+                    ),
+                  );
                 },
                 icon: Image.asset(
                   RootImages.bell,
@@ -33,6 +38,7 @@ class MainScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ],
           ),
+          centerTitle: true,
         ),
       ),
     );
