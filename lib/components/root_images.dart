@@ -21,6 +21,7 @@ class RootImages {
   static const String backIcon = 'assets/icons/back.png';
   static const String leftChevron = 'assets/icons/left-chervon.png';
   static const String rightChevron = 'assets/icons/right-chervon.png';
+  static const String blueDot = 'assets/icons/blue-dot.png';
 
   //logo
   static const String rootLogo = 'assets/logos/root-logo.png';
