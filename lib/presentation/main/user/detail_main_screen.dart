@@ -94,6 +94,7 @@ class _DetailMainScreenState extends State<DetailMainScreen> {
               width: 392.w,
               height: 191.h,
               child: GridView.builder(
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
