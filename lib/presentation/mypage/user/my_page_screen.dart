@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_colors.dart';
 import 'package:root/components/widgets/root_app_bar.dart';
 import 'package:root/components/widgets/root_layout.dart';
-import 'package:root/presentation/login/login_screen.dart';
+import 'package:root/presentation/user/login_screen.dart';
 import 'package:root/presentation/mypage/user/detail_my_page_screen.dart';
 
 import '../../../components/root_images.dart';
@@ -29,7 +29,7 @@ class _MyPageScreenState extends State<MyPageScreen> {
               height: 20.h,
             ),
             Text(
-              '1316 하원',
+              '2409 박태준',
               style: TextStyle(
                 color: RootColors.gray100,
                 fontSize: 28.sp,

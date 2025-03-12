@@ -6,6 +6,7 @@ import 'package:root/components/widgets/root_layout.dart';
 import 'package:root/presentation/calendar/calendar_screen.dart';
 import 'package:root/presentation/main/user/main_screen.dart';
 import 'package:root/presentation/mypage/user/my_page_screen.dart';
+import 'package:root/presentation/scanner/qr_scanner.dart';
 
 class RootTab extends StatefulWidget {
   const RootTab({super.key});
@@ -17,12 +18,12 @@ class RootTab extends StatefulWidget {
 class _RootTabState extends State<RootTab> with TickerProviderStateMixin {
   late TabController controller = TabController(length: 4, vsync: this);
 
-  int currentIndex = 0;
+  int currentIndex = 1;
 
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: 4, vsync: this);
+    controller = TabController(length: 4, vsync: this, initialIndex: currentIndex);
     controller.addListener(tabListener);
   }
 
@@ -117,9 +118,7 @@ class _RootTabState extends State<RootTab> with TickerProviderStateMixin {
         controller: controller,
         physics: const NeverScrollableScrollPhysics(),
         children: const [
-          Center(
-            child: Text("page1"),
-          ),
+          QrScanner(),
           MainScreen(),
           CalendarScreen(),
           MyPageScreen(),

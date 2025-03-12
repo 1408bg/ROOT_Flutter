@@ -1,11 +1,15 @@
+import 'dart:convert';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:root/components/const/data.dart';
 import 'package:root/components/root_images.dart';
 import 'package:root/components/widgets/root_layout.dart';
-import 'package:root/components/widgets/root_tab.dart';
 
 import '../../components/root_colors.dart';
 import '../../components/widgets/root_admin_tab.dart';
+import '../../components/widgets/root_tab.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -16,6 +20,35 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _obscureText = true;
+
+  String xquareId = '';
+  String password = '';
+
+  Future<void> login() async {
+    final dio = Dio();
+
+    if (xquareId == '' || password == '') {
+      throw Exception('Id와 비밀번호가 비어있습니다.');
+    }
+    try {
+      final response = await dio.post(
+        "$baseURL/auth/login",
+        data: {
+          'deviceToken': null,
+          'xquareId': xquareId,
+          'password': password,
+        },
+      );
+
+      final accessToken = response.data['accessToken'];
+      final refreshToken = response.data['refreshToken'];
+
+      await storage.write(key: accessTokenKey, value: accessToken);
+      await storage.write(key: refreshTokenKey, value: refreshToken);
+    } catch (e) {
+      debugPrint('Login errer $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +69,11 @@ class _LoginScreenState extends State<LoginScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.r),
               )),
-          onPressed: () {
-            // Navigator.of(context).push(MaterialPageRoute(builder: (_) => const RootTab()));
-            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const RootAdminTab()));
+          onPressed: () async {
+            await login();
+            // Navigator.of(context).push(MaterialPageRoute(builder: (_) => const RootAdminTab()));
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (_) => const RootTab()));
           },
           child: Text(
             '로그인',
@@ -92,6 +127,9 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 50.h,
               child: TextFormField(
                 cursorColor: RootColors.gray100,
+                onChanged: (String value) {
+                  xquareId = value;
+                },
                 style: TextStyle(
                   color: RootColors.gray300,
                   fontSize: 14.0.sp,
@@ -136,6 +174,9 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 50.h,
               child: TextFormField(
                 cursorColor: RootColors.gray100,
+                onChanged: (String value) {
+                  password = value;
+                },
                 style: TextStyle(
                   color: RootColors.gray300,
                   fontSize: 14.0.sp,

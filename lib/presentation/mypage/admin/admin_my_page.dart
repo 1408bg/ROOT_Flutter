@@ -5,7 +5,7 @@ import 'package:root/components/widgets/root_layout.dart';
 
 import '../../../components/root_colors.dart';
 import '../../../components/root_images.dart';
-import '../../login/login_screen.dart';
+import '../../user/login_screen.dart';
 
 class AdminMyPage extends StatefulWidget {
   const AdminMyPage({super.key});

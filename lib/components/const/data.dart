@@ -5,4 +5,4 @@ const refreshTokenKey = "refresh_token_key";
 
 const storage = FlutterSecureStorage();
 
-const baseURL = "https:/root-api.ijw.app";
+const baseURL = "https://root-api.ijw.app";
