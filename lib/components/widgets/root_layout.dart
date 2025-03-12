@@ -17,6 +17,7 @@ class RootLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: RootColors.gray600,
       appBar: appBar,
       body: child,
