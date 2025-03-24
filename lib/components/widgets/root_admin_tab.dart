@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:root/components/const/data.dart';
 import 'package:root/components/root_colors.dart';
 import 'package:root/components/root_images.dart';
 import 'package:root/components/widgets/root_layout.dart';
@@ -40,8 +41,16 @@ class _RootAdminTabState extends State<RootAdminTab> with TickerProviderStateMix
     });
   }
 
+  // void printTokens() async {
+  //   String? accessToken = await storage.read(key: accessTokenKey);
+  //   String? refreshToken = await storage.read(key: refreshTokenKey);
+  //
+  //   print('accessToken: $accessToken \n\n refreshToken: $refreshToken');
+  // }
+
   @override
   Widget build(BuildContext context) {
+    // printTokens();
     return RootLayout(
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
