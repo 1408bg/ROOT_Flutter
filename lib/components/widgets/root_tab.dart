@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_colors.dart';
 import 'package:root/components/root_images.dart';
 import 'package:root/components/widgets/root_layout.dart';
-import 'package:root/presentation/calendar/calendar_screen.dart';
-import 'package:root/presentation/main/user/main_screen.dart';
-import 'package:root/presentation/mypage/user/my_page_screen.dart';
+import 'package:root/presentation/calendar/ui/calendar_screen.dart';
+import 'package:root/presentation/main/user/ui/main_screen.dart';
+import 'package:root/presentation/mypage/user/ui/my_page_screen.dart';
 import 'package:root/presentation/scanner/qr_scanner.dart';
 
 class RootTab extends StatefulWidget {
