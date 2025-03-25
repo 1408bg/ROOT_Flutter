@@ -4,7 +4,7 @@ import 'package:qr_flutter/qr_flutter.dart';
 import 'package:root/components/root_colors.dart';
 import 'package:root/components/root_images.dart';
 import 'package:root/components/widgets/root_layout.dart';
-import 'package:root/components/widgets/root_main_app_bar.dart';
+import 'package:root/components/widgets/appbar/root_main_app_bar.dart';
 
 class AdminMainScreen extends StatefulWidget {
   const AdminMainScreen({super.key});

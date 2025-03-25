@@ -5,9 +5,7 @@ import 'package:root/components/root_images.dart';
 import 'package:root/components/widgets/root_layout.dart';
 import 'package:root/presentation/calendar/calendar_screen.dart';
 import 'package:root/presentation/main/admin/admin_main_screen.dart';
-import 'package:root/presentation/main/user/main_screen.dart';
 import 'package:root/presentation/mypage/admin/admin_my_page.dart';
-import 'package:root/presentation/mypage/user/my_page_screen.dart';
 
 class RootAdminTab extends StatefulWidget {
   const RootAdminTab({super.key});
@@ -40,8 +38,16 @@ class _RootAdminTabState extends State<RootAdminTab> with TickerProviderStateMix
     });
   }
 
+  // void printTokens() async {
+  //   String? accessToken = await storage.read(key: accessTokenKey);
+  //   String? refreshToken = await storage.read(key: refreshTokenKey);
+  //
+  //   print('accessToken: $accessToken \n\n refreshToken: $refreshToken');
+  // }
+
   @override
   Widget build(BuildContext context) {
+    // printTokens();
     return RootLayout(
       bottomNavigationBar: Container(
         decoration: BoxDecoration(

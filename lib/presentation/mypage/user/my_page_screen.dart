@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_colors.dart';
-import 'package:root/components/widgets/root_app_bar.dart';
+import 'package:root/components/widgets/appbar/root_app_bar.dart';
 import 'package:root/components/widgets/root_layout.dart';
 import 'package:root/presentation/user/login_screen.dart';
 import 'package:root/presentation/mypage/user/detail_my_page_screen.dart';

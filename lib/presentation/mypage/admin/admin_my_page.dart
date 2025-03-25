@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:root/components/widgets/root_app_bar.dart';
+import 'package:root/components/widgets/appbar/root_app_bar.dart';
 import 'package:root/components/widgets/root_layout.dart';
+import 'package:root/presentation/notification/notification_management_screen.dart';
 
 import '../../../components/root_colors.dart';
 import '../../../components/root_images.dart';
@@ -44,8 +45,43 @@ class _AdminMyPageState extends State<AdminMyPage> {
               ),
             ),
             SizedBox(
-              height: 59.h,
+              height: 31.h,
             ),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const NotificationManagementScreen())
+                );
+              },
+              child: Container(
+                width: 353.w,
+                height: 55.h,
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15.r),
+                  color: RootColors.gray550,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '알림 관리/생성 하기',
+                      style: TextStyle(
+                        color: const Color(0xffFFFFFF),
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    Image.asset(
+                      RootImages.rightChevron,
+                      width: 25.w,
+                      height: 25.h,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 10.h),
             GestureDetector(
               onTap: () {
                 renderDialog();
@@ -77,6 +113,7 @@ class _AdminMyPageState extends State<AdminMyPage> {
                   ],
                 ),
               ),
+
             ),
           ],
         ),
@@ -146,7 +183,7 @@ class _AdminMyPageState extends State<AdminMyPage> {
                 Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(builder: (_) => const LoginScreen()),
-                      (route) => false,
+                  (route) => false,
                 );
               },
               child: Text(

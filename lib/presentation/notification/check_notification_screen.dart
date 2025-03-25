@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_colors.dart';
 import 'package:root/components/widgets/root_layout.dart';
-import 'package:root/components/widgets/root_detail_app_bar.dart';
+import 'package:root/components/widgets/appbar/root_detail_app_bar.dart';
 
-class NotificationScreen extends StatefulWidget {
-  const NotificationScreen({super.key});
+class CheckNotificationScreen extends StatefulWidget {
+  const CheckNotificationScreen({super.key});
 
   @override
-  State<NotificationScreen> createState() => _NotificationScreenState();
+  State<CheckNotificationScreen> createState() => _CheckNotificationScreenState();
 }
 
-class _NotificationScreenState extends State<NotificationScreen> {
+class _CheckNotificationScreenState extends State<CheckNotificationScreen> {
   final List<Map<String, dynamic>> alarms = [
     {
       "title": "환경 지킴이 활동",
