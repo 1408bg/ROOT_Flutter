@@ -4,8 +4,8 @@ import 'package:root/components/root_images.dart';
 import 'package:root/components/widgets/root_layout.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-import '../../components/root_colors.dart';
-import '../../components/widgets/appbar/root_app_bar.dart';
+import '../../../components/root_colors.dart';
+import '../../../components/widgets/appbar/root_app_bar.dart';
 
 class CalendarScreen extends StatefulWidget {
   const CalendarScreen({super.key});

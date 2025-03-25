@@ -4,7 +4,7 @@ import 'package:root/components/root_images.dart';
 import 'package:root/components/widgets/root_layout.dart';
 import 'package:root/components/widgets/appbar/root_detail_app_bar.dart';
 
-import '../../../components/root_colors.dart';
+import '../../../../components/root_colors.dart';
 
 class DetailMainScreen extends StatefulWidget {
   const DetailMainScreen({super.key});
