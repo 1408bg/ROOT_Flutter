@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/widgets/appbar/root_detail_app_bar.dart';
 import 'package:root/components/widgets/root_layout.dart';
+import 'package:root/presentation/notification/ui/widgets/custom_toggle_button.dart';
 import 'package:root/presentation/notification/ui/widgets/notification_text.dart';
 import 'package:root/presentation/notification/ui/widgets/notification_text_field.dart';
 import 'package:root/presentation/notification/ui/widgets/root_notification_appbar.dart';
@@ -27,7 +28,7 @@ class NotificationGenerationScreen extends StatelessWidget {
               renderHeight(text: '제목'),
               const NotificationTextField(hintText: '제목을 입력해 주세요',),
               renderHeight(text: '알림유형'),
-              const Text('토글토글', style: TextStyle(color: Colors.white),),
+              const CustomToggleButton(),
               renderHeight(text: '반복 요일'),
               const Text('토글토글', style: TextStyle(color: Colors.white),),
               renderHeight(text: '시간'),
