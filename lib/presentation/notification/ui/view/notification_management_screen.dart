@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/presentation/notification/ui/widgets/root_notification_appbar.dart';
 import 'package:root/components/widgets/root_layout.dart';
 
-import '../../../components/root_colors.dart';
+import '../../../../components/root_colors.dart';
 
 class NotificationManagementScreen extends StatefulWidget {
   const NotificationManagementScreen({super.key});

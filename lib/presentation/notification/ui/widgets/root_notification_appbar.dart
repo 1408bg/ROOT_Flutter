@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:root/components/root_images.dart';
-import 'package:root/presentation/notification/ui/notification_generation_screen.dart';
 
 import '../../../../components/root_colors.dart';
+import '../view/notification_generation_screen.dart';
 
 class RootNotificationAppBar extends StatelessWidget
     implements PreferredSizeWidget {
